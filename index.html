@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>فيروس · VIRUS.EXE — حمّل الآن وخرّب جهازك</title>
+<meta name="description" content="تجربة فيروس مزحة واقعية: اضغط حمّل الآن وشاهد جهازك يصهر، المعالج يرتفع حرارته، الشاشة تتحطم، ثم شاشة موت زرقاء وإطفاء كامل. آمن 100% ويعمل داخل المتصفح." />
+<meta name="theme-color" content="#05060a" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="فيروس · VIRUS.EXE — حمّل الآن وخرّب جهازك" />
+<meta property="og:description" content="فيروس مزحة بكل احترافية: حرارة معالج، تحطيم شاشة، شاشة موت زرقاء، وإطفاء كامل للجهاز. آمن 100%." />
+<meta property="og:locale" content="ar_SA" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ خلفية ============ -->
+<div class="bg" aria-hidden="true">
+  <div class="grid-floor"></div>
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <canvas id="matrix" class="matrix"></canvas>
+  <div class="scanlines"></div>
+</div>
+
+<!-- ============ الواجهة الأساسية ============ -->
+<div class="shell" id="shell">
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="شعار">
+          <rect x="9" y="9" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 2v5M16 25v5M2 16h5M25 16h5M6 6l3.5 3.5M22.5 22.5L26 26M26 6l-3.5 3.5M9.5 22.5L6 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="16" r="2.6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-txt">VIRUS<span class="dot">.</span>EXE</span>
+    </a>
+    <nav class="nav-links" aria-label="روابط">
+      <a href="#stages">المراحل</a>
+      <a href="#why">ليش يخوف</a>
+      <a href="#faq">أسئلة</a>
+      <button class="sound-btn" id="soundToggle" type="button" aria-pressed="true" aria-label="تبديل الصوت">
+        <span class="snd-on">🔊 الصوت شغّال</span>
+        <span class="snd-off">🔇 صامت</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="chip-badge"><span class="pulse"></span> إصدار 4.0 — محاكي تدمير عتاد حقيقي بالكامل</p>
+      <h1>
+        حمّل <span class="neon">الفيروس</span> مرة واحدة<br />
+        وشاهد جهازك <span class="hl">يُصهر</span> أمام عينك
+      </h1>
+      <p class="lede">
+        محاكاة كاملة داخل المتصفح: تحميل ملف مشبوه، قراءة حرارية للمعالج، توقف المراوح،
+        تشقق الشاشة، ثم شاشة موت زرقاء وإطفاء نهائي. لا تثبيت، ولا ضرر — بس رهبة.
+      </p>
+
+      <div class="cta-wrap">
+        <button class="cta" id="startBtn" type="button">
+          <span class="cta-glow" aria-hidden="true"></span>
+          <span class="cta-label">⬇ حمّل الآن</span>
+          <span class="cta-sub">virus.exe · 4.2 ميجا · يدخل ملء الشاشة</span>
+        </button>
+        <p class="cta-hint">اضغط، وتأكد إنك مو في اجتماع مهم. للخروج: <kbd>Esc</kbd> أو ضغطتين سريعتين.</p>
+      </div>
+
+      <ul class="stats" aria-label="أرقام">
+        <li><b>4</b><span>مراحل تدمير</span></li>
+        <li><b>100%</b><span>داخل المتصفح</span></li>
+        <li><b>0</b><span>ملفات تنزل عندك</span></li>
+        <li><b>9.2</b><span>تقييم الرعب</span></li>
+      </ul>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why">
+      <div class="sec-head">
+        <h2>ليش يخوّف لهذي الدرجة؟</h2>
+        <p>كل تفصيلة مبنية على سلوك نظام حقيقي عند فشل عتاد — بدون مبالغة كرتونية.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">🌡️</div>
+          <h3>قراءة حرارية حيّة</h3>
+          <p>حرارة المعالج تتسلق من 42 إلى 118 مئوية، والمروحة تلف أسرع وأسرع قبل ما تتوقف.</p>
+        </article>
+        <article class="card">
+          <div class="ico">🧠</div>
+          <h3>طرمبة ذاكرة</h3>
+          <p>أشرطة الذاكرة تمتلي كأنها منبعجة فعلاً، وقرص النظام يبدأ يرمي أخطاء قطاعات.</p>
+        </article>
+        <article class="card">
+          <div class="ico">📺</div>
+          <h3>تشويش وتشقق</h3>
+          <p>انفصال ألوان RGB، تمزّق صورة، ضجيج أبيض، وشقوق زجاج حقيقية على الشاشة.</p>
+        </article>
+        <article class="card">
+          <div class="ico">💀</div>
+          <h3>إطفاء نظيف</h3>
+          <p>شاشة موت زرقاء بمعلومات وهمية دقيقة، ثم انطواء شاشة CRT وإطفاء كامل للجهاز.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STAGES -->
+    <section class="section" id="stages">
+      <div class="sec-head">
+        <h2>خط زمني للكارثة</h2>
+        <p>اللي يصير بالضبط بعد ما تضغط الزر — كل مرحلة مدتها مضبوطة.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="t-mark">0</span>
+          <div><h3>بدء التحميل</h3><p>نافذة طرفية تكتب مسار التنزيل وتنسبة تصل 100% بأسلوب نظام مشبوه.</p></div>
+        </li>
+        <li>
+          <span class="t-mark">1</span>
+          <div><h3>فحص العتاد</h3><p>سكربت يعرض لوحات قياس مباشرة: حرارة، أرصفة، سرعة مراوح، وحالة أقراص.</p></div>
+        </li>
+        <li>
+          <span class="t-mark">2</span>
+          <div><h3>انهيار بصري</h3><p>الشاشة تبدأ تتشقق وتتهزّ، ألوان تنفصل، ونوافذ تحذير تطلع في كل مكان.</p></div>
+        </li>
+        <li>
+          <span class="t-mark">3</span>
+          <div><h3>الموت الأزرق</h3><p>شاشة توقف كاملة برمز خطأ وشريط نسبة، ثم إطفاء وإعادة تشغيل.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="sec-head">
+        <h2>أسئلة سريعة</h2>
+        <p>اختصارًا: جهازك ما يتأثر، الرهبة في راسك بس.</p>
+      </div>
+      <div class="faq">
+        <details><summary>ينزّل ملفات على جهازي؟</summary><p>لا. كل شيء يعمل داخل التبويب، وإذا قفلت التبويب رجع كل شيء طبيعي فورًا.</p></details>
+        <details><summary>كيف أطلع من التجربة؟</summary><p>اضغط <kbd>Esc</kbd>، أو اضغط ضغطتين سريعتين على أي مكان. وفي شاشة الإطفاء اضغط أي مكان لإعادة التشغيل من البداية.</p></details>
+        <details><summary>يشتغل على الجوال؟</summary><p>يشتغل بالكامل، والإحساس يكون أقوى إذا ضفته للشاشة الرئيسية وخليت السطوع عالي.</p></details>
+        <details><summary>أقدر أستخدمه مقالب على أصحابي؟</summary><p>أكيد — هذا الغرض الأساسي. أرسل لهم الرابط واطلب منهم يضغطون «حمّل الآن»، والشرح يبان لهم قبل ما يبدأون.</p></details>
+      </div>
+    </section>
+
+    <section class="banner">
+      <h2>جاهز تخرب جهاز اليوم؟</h2>
+      <p>الرجاء حفظ شغلك قبل البدء… أو لا، ما أحد يحفظ.</p>
+      <button class="cta small" id="startBtn2" type="button"><span class="cta-label">⬇ حمّل الآن</span></button>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>VIRUS.EXE — محاكي مزحة تعليمي، مبني بـ HTML/CSS/JS خالي من أي مكتبات. © <span id="year">2026</span></p>
+    <p class="foot-note">تلميح احترافي: خله على شاشة كبيرة وجلسة عرض، يبان كأنه أسوأ يوم في تاريخ الشركة.</p>
+  </footer>
+</div>
+
+<!-- ============ شاشة التجربة ============ -->
+<div class="stage" id="stage" hidden>
+  <div class="stage-noise" aria-hidden="true"></div>
+  <div class="stage-vignette" aria-hidden="true"></div>
+
+  <!-- شاشة التحميل -->
+  <div class="os-window" id="loaderWin">
+    <div class="os-bar"><span>تحميل الملف</span><span class="os-x">×</span></div>
+    <div class="os-body">
+      <div class="dl-head"><span class="dl-name">virus.exe</span><span id="dlPct">0%</span></div>
+      <div class="dl-track"><div class="dl-fill" id="dlFill"></div></div>
+      <p class="dl-meta"><span id="dlSize">0.0</span> من 4.2 ميجا · <span id="dlSpeed">0 شعرة/ث</span></p>
+    </div>
+  </div>
+
+  <!-- طرفية -->
+  <div class="terminal" id="terminal" aria-live="polite">
+    <div class="term-bar"><span class="t-dots"><i></i><i></i><i></i></span> C:\Windows\System32\cmd.exe — virus.exe</div>
+    <div class="term-body" id="termBody"></div>
+  </div>
+
+  <!-- لوحة قياس -->
+  <div class="telemetry" id="telemetry">
+    <div class="tel"><label>حرارة المعالج</label><b><span id="vTemp">42</span>°C</b><div class="bar"><i id="bTemp"></i></div></div>
+    <div class="tel"><label>حمل المعالج</label><b><span id="vCpu">7</span>%</b><div class="bar"><i id="bCpu"></i></div></div>
+    <div class="tel"><label>الذاكرة</label><b><span id="vRam">18</span>%</b><div class="bar"><i id="bRam"></i></div></div>
+    <div class="tel"><label>المروحة</label><b><span id="vFan">1200</span> RPM</b><div class="bar"><i id="bFan"></i></div></div>
+    <div class="tel"><label>سلامة القرص</label><b><span id="vDisk">100</span>%</b><div class="bar"><i id="bDisk"></i></div></div>
+  </div>
+
+  <div class="pop-layer" id="popLayer" aria-hidden="true"></div>
+  <div class="cracks" id="cracks" aria-hidden="true"></div>
+
+  <!-- شاشة الموت -->
+  <div class="bsod" id="bsod" hidden>
+    <div class="bsod-inner">
+      <p class="sad">:(</p>
+      <h2>واجه جهازك مشكلة واحتاج لإعادة التشغيل.<br />نجمع معلومات الخطأ ثم نعيد التشغيل لك.</h2>
+      <p class="bsod-pct"><b id="bsodPct">0</b>% مكتمل</p>
+      <div class="bsod-info">
+        <p>لمزيد من المعلومات عن المشكلة والحلول المحتملة زر:<br /><span class="link">https://windows.com/stopcode</span></p>
+        <p>إذا كلمت شخص دعم أعطه هذه المعلومات:<br /><br />رمز التوقف:<br /><b class="code">HARDWARE_OVERHEAT_FATAL</b></p>
+      </div>
+      <div class="qr" aria-hidden="true"><svg viewBox="0 0 21 21" shape-rendering="crispEdges"><path id="qrPath" fill="#fff"/></svg></div>
+    </div>
+  </div>
+
+  <!-- إطفاء -->
+  <div class="poweroff" id="poweroff" hidden>
+    <div class="crt" id="crt"></div>
+  </div>
+
+  <!-- إعادة تشغيل -->
+  <div class="reboot" id="reboot" hidden>
+    <div class="reboot-inner">
+      <span class="rb-icon">⏻</span>
+      <h2>الجهاز انطفأ تمامًا</h2>
+      <p>درجة حرارة المعالج النهائية: <b>124°C</b> · المروحة متوقفة · القرص تالف</p>
+      <button class="cta small" id="againBtn" type="button"><span class="cta-label">إعادة التشغيل</span></button>
+      <button class="ghost" id="backBtn" type="button">رجوع للموقع</button>
+    </div>
+  </div>
+
+  <button class="exit-hint" id="exitHint" type="button" title="خروج">خروج <kbd>Esc</kbd></button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
